@@ -13,7 +13,6 @@ test("isEmpty", () => {
 	expect(isEmpty(undefined)).toBe(true);
 	expect(isEmpty("")).toBe(true);
 	expect(isEmpty([])).toBe(true);
-	// handle LLMs being stupid
 	expect(isEmpty("null")).toBe(true);
 	expect(isEmpty("[]")).toBe(true);
 });
