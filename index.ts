@@ -5,7 +5,7 @@ import {
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import axios from "axios";
-
+import { isEmpty } from "./utils.js";
 // Constants
 const UP_API_BASE_URL = "https://api.up.com.au/api/v1";
 const UP_API_TOKEN = process.env.UP_API_TOKEN;
@@ -40,6 +40,22 @@ const server = new McpServer({
 	version: "1.0.0",
 });
 
+// example resources
+server.resource(
+	"listBankAccounts",
+	new ResourceTemplate("upbank://{id}", { list: undefined }),
+	async (uri, { name }) => ({
+		contents: [
+			{
+				uri: uri.href,
+				text: `Hello, ${name}!`,
+			},
+		],
+	}),
+);
+
+// Start the server
+
 server.tool(
 	"listAccounts",
 	{
@@ -61,11 +77,11 @@ server.tool(
 	async (params) => {
 		const queryParams: Record<string, any> = {};
 
-		if (params.accountType && params.accountType !== null) {
+		if (!isEmpty(params.accountType)) {
 			queryParams["filter[accountType]"] = params.accountType;
 		}
 
-		if (params.ownershipType && params.ownershipType !== null) {
+		if (!isEmpty(params.ownershipType)) {
 			queryParams["filter[ownershipType]"] = params.ownershipType;
 		}
 
@@ -107,7 +123,6 @@ async function main() {
 	try {
 		const transport = new StdioServerTransport();
 		await server.connect(transport);
-		console.log("MCP Up Bank server started successfully");
 	} catch (error) {
 		console.error("Failed to start server:", error);
 		process.exit(1);
