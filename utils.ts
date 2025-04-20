@@ -13,8 +13,8 @@ import {
 export const isEmpty = (value: unknown) => {
 	// LLMs are silly and sometimes feed a literal `null` string
 	if (typeof value === "string") {
-		const trimmed = value.trim();
-		return trimmed.length === 0 || trimmed === "null";
+		const sanitized = value.trim().toLowerCase();
+		return sanitized.length === 0 || sanitized === "null" || sanitized === "[]";
 	}
 
 	if (Array.isArray(value)) {
