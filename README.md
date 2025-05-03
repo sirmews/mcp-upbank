@@ -1,4 +1,4 @@
-# MCP-Upbank (in progress!)
+# MCP-Upbank
 
 ## A Model Context Protocol server implementation for accessing the Up Bank API
 
