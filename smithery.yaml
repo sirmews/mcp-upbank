@@ -1,0 +1,16 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - upApiToken
+    properties:
+      upApiToken:
+        type: string
+        description: "The Up Banking API token used to authenticate with the Up API"
+  commandFunction: |
+    (config) => ({
+      command: 'node',
+      args: ['dist/main.js'],
+      env: { UP_API_TOKEN: config.upApiToken }
+    })
