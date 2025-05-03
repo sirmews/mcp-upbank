@@ -11,7 +11,22 @@ Some ideas:
 
 __Note:__ The API does not allow mutations so there's no risk of you accidentally deleting your bank account or sending money to a Nigerian prince.
 
-## How it works
+## How it works.
+
+Follow Up Bank's own [Getting Started](https://api.up.com.au/getting_started) guide. You'll want to create a `Personal Access Token`.
+
+MCP Server's remain a pain to install. I'm going to link to each client's instructions (or the ones I use anyway)
+
+- [Claude](https://modelcontextprotocol.io/quickstart/user)
+- [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
+- [Cursor](https://docs.cursor.com/context/model-context-protocol)
+
+The easiest is via [Smithery.ai](https://smithery.ai/server/@sirmews/mcp-upbank) which gives you the exact config to include in your client.
+
+> [!CAUTION]  
+> Your `Personal Access Token` is Personal. Do not share with others, including adding it inside the Smithery interface. Just paste some random values to see how the config will look.
+
+## How its built
 
 I use the openapi spec found on [Github](https://github.com/up-banking/api) to generate zod schemas and types using [Orval](https://orval.dev/).
 

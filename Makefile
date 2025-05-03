@@ -10,7 +10,11 @@ start-dev:
 
 ## build-executable: Build the project into an executable
 build-executable:
-	bun build --compile --minify --sourcemap --bytecode ./src/main.ts --outfile upbank-mcp
+	./scripts/build.sh
+
+## build
+build:
+	bun run build
 
 ## orval: Run the OpenAPI generator
 orval:

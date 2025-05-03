@@ -43,8 +43,8 @@ import {
 } from "./gen/tool-schemas.zod";
 
 const server = new McpServer({
-	name: "upAPIServer",
-	version: "1.0.0",
+	name: "mcp-upbank",
+	version: "1.0.1",
 });
 
 /**
