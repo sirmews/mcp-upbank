@@ -1,11 +1,21 @@
 {
 	"name": "@sirmews/mcp-upbank",
+	"homepage": "https://github.com/sirmews/mcp-upbank",
 	"version": "1.0.0",
 	"description": "An MCP Server for interacting with the Up Bank API",
 	"type": "module",
 	"main": "dist/main.js",
 	"author": "mcp",
 	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sirmews/mcp-upbank"
+	},
+	"scripts": {
+		"build": "bun build ./src/main.ts --outdir ./dist --target node",
+		"test": "bun test",
+		"prepublishOnly": "bun run build"
+	},
 	"devDependencies": {
 		"@orval/mcp": "^7.9.0",
 		"@types/bun": "latest",
@@ -22,5 +32,13 @@
 	},
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"license": "MIT",
+	"keywords": [
+		"upbank",
+		"up-bank",
+		"mcp",
+		"mcp-server",
+		"model context protocol"
+	]
 }
