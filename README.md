@@ -11,6 +11,13 @@ Some ideas:
 
 __Note:__ The API does not allow mutations so there's no risk of you accidentally deleting your bank account or sending money to a Nigerian prince.
 
+## How it works
+
+I use the openapi spec found on [Github](https://github.com/up-banking/api) to generate zod schemas and types using [Orval](https://orval.dev/).
+
+Unfortunately, the api uses opaque cursors which means I can't simply use the outputs generated from Orval. 
+
+
 
 Resources:
 

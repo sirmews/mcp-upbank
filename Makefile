@@ -8,9 +8,19 @@ RESET := \033[0m
 start-dev:
 	bunx @modelcontextprotocol/inspector bun run .
 
-## build: Build the project
-build:
-	bun build ./index.ts --outdir ./build --target node
+## build-executable: Build the project into an executable
+build-executable:
+	bun build --compile --minify --sourcemap --bytecode ./src/main.ts --outfile upbank-mcp
+
+## orval: Run the OpenAPI generator
+orval:
+	rm -rf src/gen
+	bunx orval
+	./scripts/fix-orval-import.sh
+
+## run-dev: Run the development server
+run-dev:
+	bunx @modelcontextprotocol/inspector bun run src/main.ts
 
 ## help: Show a list of commands
 help : Makefile

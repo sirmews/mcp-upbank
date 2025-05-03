@@ -19,6 +19,23 @@ export interface CardPurchaseMethod {
 	cardNumberSuffix: string;
 }
 
+export interface Account {
+	type: "accounts";
+	id: string;
+	attributes: AccountAttributes;
+	links: {
+		self: string;
+	};
+}
+
+export interface AccountAttributes {
+	displayName: string;
+	accountType: string;
+	ownershipType: string;
+	balance: Money;
+	createdAt: string;
+}
+
 export interface TransactionAttributes {
 	status: string;
 	rawText: string;

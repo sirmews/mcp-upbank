@@ -1,17 +1,20 @@
 {
-  "name": "mcp-upbank",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.10.1",
-    "axios": "^1.8.4",
-    "zod": "^3.24.3"
-  }
+	"name": "mcp-upbank",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"devDependencies": {
+		"@types/bun": "latest",
+		"biome": "^0.3.3",
+		"openapi-typescript": "^7.6.1"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.10.1",
+		"@orval/mcp": "^7.9.0",
+		"orval": "^7.9.0",
+		"zod": "^3.24.3"
+	}
 }
