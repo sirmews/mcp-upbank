@@ -7,6 +7,7 @@
 	"main": "dist/main.js",
 	"author": "mcp",
 	"private": false,
+	"files": ["dist/main.js", "README.md", "LICENSE"],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/sirmews/mcp-upbank"
@@ -31,9 +32,10 @@
 		"zod": "^3.24.3"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"tag": "latest"
 	},
-	"license": "MIT",
+	"license": "Unlicense",
 	"keywords": [
 		"upbank",
 		"up-bank",
