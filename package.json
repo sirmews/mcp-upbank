@@ -1,20 +1,26 @@
 {
-	"name": "mcp-upbank",
-	"module": "index.ts",
+	"name": "@sirmews/mcp-upbank",
+	"version": "1.0.0",
+	"description": "An MCP Server for interacting with the Up Bank API",
 	"type": "module",
-	"private": true,
+	"main": "dist/main.js",
+	"author": "mcp",
+	"private": false,
 	"devDependencies": {
+		"@orval/mcp": "^7.9.0",
 		"@types/bun": "latest",
 		"biome": "^0.3.3",
-		"openapi-typescript": "^7.6.1"
+		"openapi-typescript": "^7.6.1",
+		"orval": "^7.9.0"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.10.1",
-		"@orval/mcp": "^7.9.0",
-		"orval": "^7.9.0",
 		"zod": "^3.24.3"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }

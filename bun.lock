@@ -5,14 +5,14 @@
       "name": "mcp-upbank",
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.10.1",
-        "@orval/mcp": "^7.9.0",
-        "orval": "^7.9.0",
         "zod": "^3.24.3",
       },
       "devDependencies": {
+        "@orval/mcp": "^7.9.0",
         "@types/bun": "latest",
         "biome": "^0.3.3",
         "openapi-typescript": "^7.6.1",
+        "orval": "^7.9.0",
       },
       "peerDependencies": {
         "typescript": "^5",
@@ -987,6 +987,8 @@
     "@orval/core/chalk": ["chalk@4.1.2", "", { "dependencies": { "ansi-styles": "^4.1.0", "supports-color": "^7.1.0" } }, "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="],
 
     "@orval/core/openapi3-ts": ["openapi3-ts@4.4.0", "", { "dependencies": { "yaml": "^2.5.0" } }, "sha512-9asTNB9IkKEzWMcHmVZE7Ts3kC9G7AFHfs8i7caD8HbI76gEjdkId4z/AkP83xdZsH7PLAnnbl47qZkXuxpArw=="],
+
+    "@orval/mock/openapi3-ts": ["openapi3-ts@4.4.0", "", { "dependencies": { "yaml": "^2.5.0" } }, "sha512-9asTNB9IkKEzWMcHmVZE7Ts3kC9G7AFHfs8i7caD8HbI76gEjdkId4z/AkP83xdZsH7PLAnnbl47qZkXuxpArw=="],
 
     "@stoplight/json-ref-readers/tslib": ["tslib@1.14.1", "", {}, "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="],
 
