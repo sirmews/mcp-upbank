@@ -1,7 +1,7 @@
 {
 	"name": "@sirmews/mcp-upbank",
 	"homepage": "https://github.com/sirmews/mcp-upbank",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "An MCP Server for interacting with the Up Bank API",
 	"type": "module",
 	"main": "dist/main.js",
@@ -17,7 +17,7 @@
 	},
 	"scripts": {
 		"build": "bun build ./src/main.ts --outdir ./dist --target node",
-		"postbuild": "echo '#!/usr/bin/env node' | cat - dist/main.js > dist/main.tmp && mv dist/main.tmp dist/main.js",
+		"postbuild": "echo '#!/usr/bin/env node' | cat - dist/main.js > dist/main.tmp && mv dist/main.tmp dist/main.js && chmod +x dist/main.js",
 		"test": "bun test",
 		"prepublishOnly": "bun run build"
 	},

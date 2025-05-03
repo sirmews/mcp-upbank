@@ -3,7 +3,7 @@
  *
  * Until some fixes are made to the orval output, we make manual adjustments here.
  */
-
+import packageJson from "../package.json" assert { type: "json" };
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerPaginationTools } from "./pagination";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -44,7 +44,8 @@ import {
 
 const server = new McpServer({
 	name: "mcp-upbank",
-	version: "1.0.1",
+	// read version from package.json
+	version: packageJson.version,
 });
 
 /**
