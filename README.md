@@ -39,6 +39,7 @@ This is why, for the moment, I'm manually copying some files across and generati
 - Fix/Enhance Orval's generator to make this a better experience. Or maybe I just need to read their docs better.
 - Create prompts that provide instructions on analyzing ingested data. 
 - Distribute executables with Homebrew, Chocolatey, apt etc.
+- Resolve the additional endpoints that aren't needed e.g. patch, post, delete on resources
 
 Resources:
 
