@@ -6,6 +6,7 @@
 import packageJson from "../package.json" assert { type: "json" };
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerPaginationTools } from "./pagination";
+import { registerUpBankPrompts } from "./prompts";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
 import {
@@ -53,6 +54,7 @@ const server = new McpServer({
  * Loop through each pagination handler and add it to the server
  */
 registerPaginationTools(server);
+registerUpBankPrompts(server);
 
 server.tool(
 	"getAccounts",
